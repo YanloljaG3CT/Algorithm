@@ -1,3 +1,5 @@
+//1. 숫자 문자열과 영단어
+
 class Solution {
     public int solution(String s) {
         int answer = 0;
@@ -9,6 +11,8 @@ class Solution {
         return answer;
     }
 }
+
+//2. 신고 결과 받기
 
 import java.util.*;
 
