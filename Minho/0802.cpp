@@ -28,9 +28,5 @@ int main() {
 
     cin >> N >> M;
 
-    for (int i = 1; i <= N; i++) {
-        arr[i] = i;
-    }
-
     Backtracking(0);
 }
