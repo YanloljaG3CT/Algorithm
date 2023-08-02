@@ -2,7 +2,6 @@
 using namespace std;
 
 int N, M;
-int arr[10];
 int result[10];
 
 void DFS(int index, int cnt) {
@@ -22,9 +21,6 @@ void DFS(int index, int cnt) {
 
 int main() {
     cin >> N >> M;
-    for (int i = 1; i <= N; i++) {
-        arr[i] = i;
-    }
 
     for (int i = 1; i <= N; i++) {
         result[1] = i;
