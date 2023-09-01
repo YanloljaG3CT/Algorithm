@@ -1,10 +1,11 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 int N, answer;
 vector<string> map(53);
 
 void eat() {
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < N; i++) {
         int sum = 1;
         for (int j = 0; j < N - 1; j++) {
             if (map[i][j] == map[i][j + 1]) {
@@ -33,6 +34,11 @@ void eat() {
 
 int main() {
     cin >> N;
+
+    for (int i = 0; i < N; i++) {
+        cin >> map[i];
+    }
+
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N - 1; j++) {
             if (map[i][j] != map[i][j + 1]) {
@@ -44,7 +50,7 @@ int main() {
             if (map[j][i] != map[j + 1][i]) {
                 swap(map[j][i], map[j + 1][i]);
                 eat();
-                swap(map[i][j], map[j + 1][i]);
+                swap(map[j][i], map[j + 1][i]);
             }
         }
     }
